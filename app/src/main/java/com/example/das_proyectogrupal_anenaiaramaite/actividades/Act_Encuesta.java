@@ -57,7 +57,7 @@ public class Act_Encuesta extends AppCompatActivity {
 
 
     String idioma, titulo, enunciado, email, op1, op2, op3, op4, usuario, apellido, email_autor, respuesta, respRegistrada;
-    int id, pos, numOpciones, numVotos;
+    int id, pos, numOpciones, numVotos, numResp;
     boolean cerrada;
 
     private String URL_SERVER = "http://ec2-54-93-62-124.eu-central-1.compute.amazonaws.com/mlopez286/WEB/proyectoGrupal/";
@@ -278,6 +278,7 @@ public class Act_Encuesta extends AppCompatActivity {
                 if (flag1){
                     Log.d("RESPUESTA", "Has clicado 1");
                     // Si flag 1 es true
+                    numResp = 1;
                     count1++;
                     respuesta = tv_op1.getText().toString();
                     count2=count2_anterior;
@@ -322,6 +323,7 @@ public class Act_Encuesta extends AppCompatActivity {
                     Log.d("RESPUESTA", "Has clicado 2");
                     // Si flag 2 es true
                     count2++;
+                    numResp=2;
                     respuesta = tv_op2.getText().toString();
                     count1=count1_anterior;
                     count3=count3_anterior;
@@ -370,6 +372,7 @@ public class Act_Encuesta extends AppCompatActivity {
                     count1=count1_anterior;
                     count2=count2_anterior;
                     count4=count4_anterior;
+                    numResp=3;
 
                     flag1=true;
                     flag2=true;
@@ -411,6 +414,7 @@ public class Act_Encuesta extends AppCompatActivity {
                     count1=count1_anterior;
                     count2=count2_anterior;
                     count3=count3_anterior;
+                    numResp=4;
 
                     flag1=true;
                     flag2=true;
@@ -535,10 +539,8 @@ public class Act_Encuesta extends AppCompatActivity {
                         parametros.put("email_autor", email_autor);
                         parametros.put("email_votante", email);
                         parametros.put("respuesta", respuesta);
-                        parametros.put("count1", count1+"");
-                        parametros.put("count2", count2+"");
-                        parametros.put("count3", count3+"");
-                        parametros.put("count4", count4+"");
+                        parametros.put("numResp", numResp+"");
+
                         return parametros;
                     }
                 };
