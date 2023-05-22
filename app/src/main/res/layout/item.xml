@@ -36,28 +36,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <HorizontalScrollView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <TextView
+                   <TextView
                             android:id="@+id/tv_titulo"
                             style="@style/titulos"
                             android:layout_width="match_parent"
                             android:layout_height="44dp"
                             android:fontFamily="@font/alata"
-                            android:gravity="center"
                             android:textColor="@color/negro"
                             android:background="@color/verde"
-                            android:scrollbars="horizontal"
-                            android:scrollHorizontally="true"
                             android:text="TÍTULO PREGUNTA"
                             android:textSize="20dp"
                             android:textStyle="bold" />
-
-
-
-                    </HorizontalScrollView>
                 </LinearLayout>
 
 
