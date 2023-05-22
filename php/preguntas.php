@@ -85,13 +85,26 @@
             $email_autor=addslashes($_POST['email_autor']);
             $email_votante=addslashes($_POST['email_votante']);
             $respuesta=addslashes($_POST['respuesta']);
-            $count1=addslashes($_POST['count1']);
-            $count2=addslashes($_POST['count2']);
+            $numResp=addslashes($_POST['numResp']);
+            /*$count2=addslashes($_POST['count2']);
             $count3=addslashes($_POST['count3']);
-            $count4=addslashes($_POST['count4']);
+            $count4=addslashes($_POST['count4']);*/
      
             # Preparar consulta 
-            $query = "UPDATE Pregunta SET cont1='$count1', cont2='$count2', cont3='$count3', cont4='$count4' WHERE titulo='$titulo' AND email_autor='$email_autor'";
+            switch ($numResp) {
+                case "1":
+                    $query = "UPDATE Pregunta SET cont1=cont1+1  WHERE titulo='$titulo' AND email_autor='$email_autor'";
+                    break;
+                case "2":
+                    $query = "UPDATE Pregunta SET cont2=cont2+1  WHERE titulo='$titulo' AND email_autor='$email_autor'";
+                    break;
+                case "3":
+                    $query = "UPDATE Pregunta SET cont3=cont3+1  WHERE titulo='$titulo' AND email_autor='$email_autor'";
+                    break;
+                case "4":
+                    $query = "UPDATE Pregunta SET cont4=cont4+1  WHERE titulo='$titulo' AND email_autor='$email_autor'";
+                    break;
+            }
             # Ejecutarla y obtener resultado
             $resultado = $con -> query($query);
            
