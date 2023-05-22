@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- PROPIO siguiendo: https://developer.android.com/guide/topics/resources/animation-resource?hl=es-419#java -->
+<scale xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="80"
+    android:fromXScale="90%"
+    android:toXScale="105%"
+    android:fromYScale="90%"
+    android:toYScale="105%"
+    android:pivotX="50%"
+    android:pivotY="50%"
+    android:repeatCount="4"
+    android:repeatMode="reverse" />

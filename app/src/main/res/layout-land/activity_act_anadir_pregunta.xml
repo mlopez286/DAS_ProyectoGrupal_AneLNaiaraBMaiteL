@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.40"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.6"
+                android:paddingRight="8dp"
+
+                app:contentPaddingLeft="10dp"
+                app:contentPaddingRight="10dp"
+                app:contentPaddingTop="10dp">
+
+                <ImageView
+                    android:id="@+id/iv_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    app:srcCompat="@drawable/leader_amico" />
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="0.1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:backgroundTint="@color/negro"
+                    app:cardCornerRadius="50dp">
+
+                    <Button
+                        android:id="@+id/imageButton"
+                        android:paddingTop="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/negro"
+                        android:drawableTop="@drawable/flecha_back"
+                        android:onClick="volver"
+                         />
+                </androidx.cardview.widget.CardView>
+
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="50dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/verde"
+
+                    app:cardCornerRadius="90dp">
+
+                    <Button
+                        android:id="@+id/b_guardar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/verde"
+                        android:fontFamily="@font/alata"
+                        android:foregroundGravity="center"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:text="@string/publicar"
+                        android:textSize="20dp" />
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:divider="?attr/actionModeBackground"
+                    android:foregroundGravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="5dp"
+                    tools:context=".activities.Act_AnadirPregunta">
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:paddingRight="8dp"
+                        app:cardBackgroundColor="@color/negro"
+                        app:cardCornerRadius="20dp">
+
+                        <TextView
+                            android:id="@+id/tv_titulo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:autoText="true"
+                            android:background="@color/negro"
+                            android:elegantTextHeight="true"
+                            android:fontFamily="@font/alata"
+                            android:text="@string/anadirPregunta"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="28dp" />
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="8dp"
+                        android:weightSum="2">
+
+                        <androidx.cardview.widget.CardView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:paddingHorizontal="5dp"
+                            android:paddingVertical="10dp"
+                            android:paddingTop="8dp"
+                            app:contentPaddingLeft="10dp"
+                            app:contentPaddingRight="10dp"
+                            app:contentPaddingTop="10dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/textView3"
+                                    style="@style/subtitulos2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/alata"
+                                    android:text="@string/titulo_pregunta"
+                                    android:textSize="23dp" />
+
+
+                                <EditText
+                                    android:id="@+id/add_titulo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/gris_blanco"
+                                    android:ems="10"
+                                    android:fontFamily="@font/alata"
+                                    android:hint="@string/campoTituloPregunta"
+                                    android:inputType="textPersonName"
+                                    android:maxLength="100"
+                                    android:paddingStart="10dp"
+                                    android:paddingTop="10dp"
+                                    android:paddingBottom="10dp"
+                                    android:scrollbars="horizontal"
+                                    android:scrollHorizontally="true" />
+
+                                <Space
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp" />
+
+                                <TextView
+                                    android:id="@+id/textView4"
+                                    style="@style/subtitulos2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/alata"
+                                    android:text="@string/pregunta_pregunta"
+                                    android:textSize="23dp" />
+
+                                <EditText
+                                    android:id="@+id/add_enunciado"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="140dp"
+                                    android:background="@color/gris_blanco"
+                                    android:ems="10"
+                                    android:fontFamily="@font/alata"
+                                    android:gravity="start|top|center"
+                                    android:hint="@string/placeholder_enunciado"
+                                    android:inputType="textMultiLine"
+                                    android:maxLength="1000"
+                                    android:paddingStart="20dp"
+                                    android:paddingTop="8dp"
+                                    android:paddingEnd="20dp"
+                                    android:scrollbars="vertical"
+                                    android:scrollHorizontally="false" />
+
+                                <Space
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp" />
+
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/alata"
+                                    android:paddingLeft="8dp"
+                                    android:paddingRight="8dp"
+                                    app:cardBackgroundColor="@color/negro"
+                                    app:cardCornerRadius="20dp"
+                                    app:contentPaddingLeft="10dp"
+                                    app:contentPaddingRight="10dp">
+
+                                    <TextView
+                                        android:id="@+id/sin_texto2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:autoText="true"
+                                        android:background="@color/negro"
+                                        android:backgroundTint="@color/negro"
+                                        android:drawableStart="@drawable/question_gray"
+                                        android:drawablePadding="-30dp"
+                                        android:elegantTextHeight="true"
+                                        android:fontFamily="@font/alata"
+                                        android:text="@string/opciones"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/white"
+                                        android:textSize="28dp" />
+                                </androidx.cardview.widget.CardView>
+
+                                <TextView
+                                    android:id="@+id/tv_info2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:autoSizeTextType="uniform"
+                                    android:fontFamily="@font/alata"
+                                    android:gravity="center"
+                                    android:paddingStart="5dp"
+                                    android:paddingEnd="5dp"
+                                    android:text="@string/maxOpciones"
+                                    android:textColor="@color/negro"
+                                    android:textSize="19dp" />
+
+                                <Space
+                                    android:layout_width="match_parent"
+                                    android:layout_height="10dp" />
+
+                                <EditText
+                                    android:id="@+id/tv_opcion1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/progress_track"
+                                    android:ems="10"
+                                    android:fontFamily="@font/alata"
+                                    android:hint="@string/opcion1"
+                                    android:inputType="text"
+                                    android:maxLength="30"
+                                    android:paddingStart="20dp" />
+
+                                <Space
+                                    android:layout_width="match_parent"
+                                    android:layout_height="10dp" />
+
+                                <EditText
+                                    android:id="@+id/tv_opcion2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/progress_track"
+                                    android:ems="10"
+                                    android:fontFamily="@font/alata"
+                                    android:hint="@string/opcion2"
+                                    android:inputType="text"
+                                    android:maxLength="30"
+                                    android:paddingStart="20dp" />
+
+                                <Space
+                                    android:layout_width="match_parent"
+                                    android:layout_height="10dp" />
+
+                                <EditText
+                                    android:id="@+id/tv_opcion3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/progress_track"
+                                    android:ems="10"
+                                    android:fontFamily="@font/alata"
+                                    android:hint="@string/opcion3"
+                                    android:inputType="text"
+                                    android:maxLength="30"
+                                    android:paddingStart="20dp" />
+
+                                <Space
+                                    android:layout_width="match_parent"
+                                    android:layout_height="10dp" />
+
+                                <EditText
+                                    android:id="@+id/tv_opcion4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/progress_track"
+                                    android:ems="10"
+                                    android:fontFamily="@font/alata"
+                                    android:hint="@string/opcion4"
+                                    android:inputType="text"
+                                    android:maxLength="30"
+                                    android:paddingStart="20dp" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                            </androidx.cardview.widget.CardView>
+
+                            <Space
+                                android:layout_width="match_parent"
+                                android:layout_height="10dp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <Space
+                                        android:layout_width="match_parent"
+                                        android:layout_height="20dp" />
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="5dp"
+                                        android:backgroundTint="@color/negro"
+                                        android:paddingBottom="15dp"
+                                        app:cardCornerRadius="18dp"
+                                        app:cardElevation="20dp" />
+
+                                    <Space
+                                        android:layout_width="match_parent"
+                                        android:layout_height="20dp" />
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>

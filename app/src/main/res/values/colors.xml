@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="marron">#D6D58E</color>
+    <color name="azul_turquesa">#0E5761</color>
+    <color name="azul_oscuro">#042940</color>
+    <color name="verde_oscuro">#2C6C2E</color>
+    <color name="verde">#80b918</color>
+    <color name="verde_claro">#A5EC3C</color>
+    <color name="lima">#DBF227</color>
+    <color name="contraste">#00BCD4</color>
+    <color name="teal_700">#028090</color>
+    <color name="negro">#FF000000</color>
+    <color name="gris_negro">#3A3A3A</color>
+    <color name="gris">#CAB7B1</color>
+    <color name="gris_blanco">#EDEDED</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="negroTransp">#7C000000</color>
+    <color name="g_verde">#94EC2E</color>
+    <color name="g_rojo">#DC2424</color>
+    <color name="g_amarillo">#ECB62E</color>
+    <color name="g_azul">#3097C6</color>
+
+
+
+
+
+
+</resources>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "904857256110",
+    "project_id": "proyectogrupal-anenaiaramaite",
+    "storage_bucket": "proyectogrupal-anenaiaramaite.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:904857256110:android:b0d8455bc0a460a2e2ed3f",
+        "android_client_info": {
+          "package_name": "com.example.das_proyectogrupal_anenaiaramaite"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "904857256110-flicg0ct97igp0sm91b3dh8sqvomutbd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEJt4w6q3nQ72BU-4w1YwGu44GnOb1NXA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "904857256110-flicg0ct97igp0sm91b3dh8sqvomutbd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
